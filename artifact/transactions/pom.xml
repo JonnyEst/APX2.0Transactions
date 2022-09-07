@@ -14,5 +14,6 @@
 	<name>TRANSACTIONS</name>
 	<modules>
 		<module>WIKJT001-01-CO</module>
+		<module>WIKJT001-02-CO</module>
 	</modules>
 </project>

@@ -36,6 +36,7 @@ public abstract class AbstractWIKJT00101COTransaction extends AbstractTransactio
 
 		return autoDTOIN;
 		//return (AutoDTOIN) getParameter("data");
+
 	}
 
 	/**
@@ -44,5 +45,7 @@ public abstract class AbstractWIKJT00101COTransaction extends AbstractTransactio
 	protected void setData(final AutoDTOOUT field){
 		this.addParameter("data", field);
 	}
+
+
 
 }

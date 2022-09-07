@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 import com.bbva.wikj.dto.apx2.AutoDTOIN;
 import com.bbva.wikj.dto.apx2.AutoDTOOUT;
 import com.bbva.wikj.dto.apx2.VendedorDTO;
+import com.bbva.wikj.dto.apx2.idTwo.IdClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +19,7 @@ import org.mockito.Spy;
 import org.springframework.aop.framework.Advised;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
+/*
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {
 		"classpath:/META-INF/spring/WIKJR001-app.xml",
@@ -52,12 +53,20 @@ public class WIKJR001Test {
 		}
 		return result;
 	}
-	
-	@Test
+	*/
+	/*@Test
 	public void executeTest(){
 		//wikjR001.execute(datosAuto());
 		//System.out.println(datosAuto());
 		//Assert.assertEquals(0, context.getAdviceList().size());
+	}
+
+	@Test
+	public void executeTest1(){
+		//Assert.assertEquals(idTest(),idTest());
+		//wikjR001.execute2(idTest());
+		wikjR001.execute2(idTest());
+		Assert.assertEquals(0, context.getAdviceList().size());
 	}
 
 	public AutoDTOIN datosAuto(){
@@ -82,4 +91,11 @@ public class WIKJR001Test {
 		return  autoDTOIN;
 	}
 
-}
+	public IdClass idTest(){
+		IdClass idClass = new IdClass();
+		idClass.setId(3);
+
+		return idClass;
+	}*/
+
+

@@ -3,6 +3,8 @@ package com.bbva.wikj.lib.r001.impl;
 import com.bbva.wikj.dto.apx2.AutoDTOIN;
 import com.bbva.wikj.dto.apx2.AutoDTOOUT;
 import com.bbva.wikj.dto.apx2.VendedorDTO;
+import com.bbva.wikj.dto.apx2.idTwo.AutoSalidaGet;
+import com.bbva.wikj.dto.apx2.idTwo.IdClass;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,6 +39,26 @@ public class WIKJR001Impl extends WIKJR001Abstract {
 
 		return autoDTOOUT;
 	}
+
+	@Override
+	public AutoSalidaGet execute2(IdClass idClass) {
+		AutoSalidaGet autoSalidaGet = new AutoSalidaGet();
+		AutoDTOIN autoDTOIN = new AutoDTOIN();
+		autoSalidaGet.setIdProduct(idClass.getId());
+		autoSalidaGet.setMarca(autoDTOIN.getMarca());
+		autoSalidaGet.setModelo(autoDTOIN.getModelo());
+		autoSalidaGet.setAño(autoDTOIN.getAño());
+		autoSalidaGet.setColor(autoDTOIN.getColor());
+		autoSalidaGet.setPuertas(autoDTOIN.getPuertas());
+		autoSalidaGet.setTrasmision(autoDTOIN.getTrasmision());
+		autoSalidaGet.setKilometros(autoDTOIN.getKilometros());
+		autoSalidaGet.setVendedorDTO(autoDTOIN.getVendedorDTO());
+		autoSalidaGet.setPrecio(autoDTOIN.getPrecio());
+		autoSalidaGet.setDescuentoCompraSinIVA(metodoIva(autoDTOIN));
+
+		return autoSalidaGet;
+	}
+
 
 	public static int metodoIva(AutoDTOIN autoDTOIN){
 		int precioDescuento=0;
